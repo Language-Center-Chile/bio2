@@ -6,9 +6,10 @@
   <title>Membresías - Biodiversidad.cl</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
     <ul class="nav-links">
@@ -24,55 +25,64 @@
     </ul>
   </nav>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-id-card icon"></i>
-      <h2>Planes de Membresía</h2>
-      <p>Elige el plan que mejor se adapte a tus necesidades y accede a beneficios exclusivos.</p>
-    </section>
+  <!-- HERO DE MEMBRESÍAS -->
+  <section class="hero-marketplace" style="background-image: url('https://plus.unsplash.com/premium_photo-1687525932455-4e8c83a4c0de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVtYnJlc2lhJTIwYmlvZGl2ZXJzaWRhZHxlbnwwfHwwfHx8MA%3D%3D'); background-size: cover;">
+    <div class="hero-overlay">
+      <h1>Planes de Membresía</h1>
+      <p>Accede a beneficios especiales según tu perfil: ciudadano, emprendedor o experto ambiental.</p>
+    </div>
+  </section>
 
-    <section class="membership-grid">
-      <div class="membership-card">
-        <h3>Gratuito</h3>
-        <p>Acceso a contenidos abiertos, blog y eventos generales.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Lectura del blog</li>
-          <li><i class="fas fa-check-circle"></i> Donaciones a campañas</li>
-          <li><i class="fas fa-times-circle"></i> Publicación de productos</li>
-        </ul>
-        <div class="membership-price">$0 / mes</div>
-        <a href="plan-gratuito.html" class="btn primary">Seleccionar</a>
+  <!-- PLANES -->
+  <section class="product-grid centered" style="padding: 3rem 1rem;">
+    <div class="membership-card">
+      <h3>Gratuito</h3>
+      <p>Para ciudadanos comprometidos con el medio ambiente.</p>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Lectura del blog</li>
+        <li><i class="fas fa-check-circle"></i> Donaciones a campañas</li>
+        <li><i class="fas fa-times-circle"></i> Publicación de productos</li>
+      </ul>
+      <div class="membership-price">$0 / mes</div>
+      <a href="plan-gratuito.html" class="btn secondary">Seleccionar</a>
+    </div>
 
-      </div>
+    <div class="membership-card featured-card" style="border: 2px solid var(--primary); background-color: #202b1f;">
+      <h3>Emprendedor Verde</h3>
+      <p>Ideal para vender productos ecológicos y destacar tu negocio.</p>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Publicar productos</li>
+        <li><i class="fas fa-check-circle"></i> Perfil personalizado</li>
+        <li><i class="fas fa-check-circle"></i> Soporte destacado</li>
+      </ul>
+      <div class="membership-price">$4.990 / mes</div>
+      <a href="plan-emprendedor.html" class="btn primary">Seleccionar</a>
+    </div>
 
-      <div class="membership-card">
-        <h3>Emprendedor Verde</h3>
-        <p>Ideal para quienes venden productos ecológicos o artesanales.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Publicar productos</li>
-          <li><i class="fas fa-check-circle"></i> Perfil personalizado</li>
-          <li><i class="fas fa-check-circle"></i> Soporte destacado</li>
-        </ul>
-        <div class="membership-price">$4.990 / mes</div>
-        <a href="plan-emprendedor.html" class="btn primary">Seleccionar</a>
+    <div class="membership-card">
+      <h3>Consultor Pro</h3>
+      <p>Para profesionales que quieren llegar a más instituciones.</p>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Perfil profesional</li>
+        <li><i class="fas fa-check-circle"></i> Acceso a ofertas laborales</li>
+        <li><i class="fas fa-check-circle"></i> Certificados descargables</li>
+      </ul>
+      <div class="membership-price">$6.990 / mes</div>
+      <a href="plan-consultor.html" class="btn primary">Seleccionar</a>
+    </div>
+  </section>
 
-      </div>
+  <!-- LLAMADO A LA ACCIÓN -->
+  <section class="create-campaign-section">
+    <div class="info-section">
+      <div class="icon"><i class="fas fa-user-plus"></i></div>
+      <h3 class="text-white">¿Representas una empresa o institución?</h3>
+      <p class="text-white">Solicita un plan personalizado con herramientas exclusivas para campañas, marketplace, educación y gestión ambiental.</p>
+      <a href="#" class="btn secondary">Contactar equipo</a>
+    </div>
+  </section>
 
-      <div class="membership-card">
-        <h3>Consultor Pro</h3>
-        <p>Para especialistas ambientales que desean ampliar su red.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Perfil profesional</li>
-          <li><i class="fas fa-check-circle"></i> Acceso a ofertas</li>
-          <li><i class="fas fa-check-circle"></i> Certificados descargables</li>
-        </ul>
-        <div class="membership-price">$6.990 / mes</div>
-        <a href="plan-consultor.html" class="btn primary">Seleccionar</a>
-
-      </div>
-    </section>
-  </main>
-
+  <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 Biodiversidad.cl – Súmate a la comunidad y haz la diferencia.</p>
   </footer>

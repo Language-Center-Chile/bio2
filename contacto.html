@@ -6,41 +6,10 @@
   <title>Contacto - Biodiversidad.cl</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .contact-container {
-      max-width: 600px;
-      margin: 3rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .contact-container h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .contact-container form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact-container label {
-      margin-top: 1rem;
-      font-weight: 500;
-    }
-    .contact-container input,
-    .contact-container textarea {
-      padding: 0.7rem;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      resize: vertical;
-    }
-    .contact-container .btn {
-      margin-top: 1.5rem;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
     <ul class="nav-links">
@@ -56,24 +25,45 @@
     </ul>
   </nav>
 
-  <main>
-    <div class="contact-container">
-      <h2>Contáctanos</h2>
-      <form>
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" required />
+  <!-- CONTACTO -->
+ <section class="info-grid" style="padding: 3rem 1rem; background-color: #1a1a1a;">
+  <div class="info-section" style="max-width: 700px; margin: auto;">
+    <div class="icon"><i class="fas fa-envelope"></i></div>
+    <h2 class="text-white">Contáctanos</h2>
+    <p class="text-white">¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos a través del siguiente formulario.</p>
 
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" required />
+    <form class="filters-region" style="margin-top: 2rem;">
+      <label for="nombre" class="text-white">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" class="filter-input" required />
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      <label for="correo" class="text-white">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" class="filter-input" required />
 
-        <button type="submit" class="btn primary">Enviar mensaje</button>
-      </form>
-    </div>
+      <label for="mensaje" class="text-white">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" class="filter-input" required></textarea>
+
+      <button type="submit" class="btn primary">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+
+    <!-- REDES SOCIALES -->
+    <section class="info-grid" style="padding: 2rem 1rem; background-color: #121212;">
+      <div class="info-section" style="max-width: 600px; margin: auto; text-align: center;">
+        <h3 class="text-white">También estamos en redes</h3>
+        <p class="text-white">Síguenos para estar al día con campañas, cursos y oportunidades.</p>
+        <div style="margin-top: 1rem; font-size: 1.5rem;">
+          <a href="#" style="margin: 0 10px; color: var(--white);"><i class="fab fa-facebook-square"></i></a>
+          <a href="#" style="margin: 0 10px; color: var(--white);"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="margin: 0 10px; color: var(--white);"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="margin: 0 10px; color: var(--white);"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 Biodiversidad.cl – Estamos aquí para ayudarte.</p>
   </footer>

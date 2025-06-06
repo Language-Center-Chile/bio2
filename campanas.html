@@ -1,61 +1,103 @@
-<!-- campanas.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campa&ntilde;as Ambientales - Biodiversidad.cl</title>
+  <title>Campañas Ambientales - Biodiversidad.cl</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="marketplace.html">Marketplace</a></li>
       <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educaci&oacute;n</a></li>
-      <li><a href="campanas.html">Campa&ntilde;as</a></li>
-      <li><a href="informacion.html">Informaci&oacute;n</a></li>
-      <li><a href="membresias.html">Membres&iacute;as</a></li>
+      <li><a href="educacion.html">Educación</a></li>
+      <li><a href="campanas.html">Campañas</a></li>
+      <li><a href="informacion.html">Información</a></li>
+      <li><a href="membresias.html">Membresías</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="login.html" class="btn-login">Ingresar</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-hand-holding-heart icon"></i>
-      <h2>Campa&ntilde;as de Apoyo Ambiental</h2>
-      <p>Contribuye a proyectos que generan un impacto positivo en nuestro entorno natural.</p>
-    </section>
+  <!-- HERO -->
+  <section class="hero-marketplace">
+    <div class="hero-overlay">
+      <h1>Súémate a las Campañas Verdes</h1>
+      <p>Impacta positivamente en la naturaleza con acciones concretas. ¡Cada aporte cuenta!</p>
+      <a href="#campanas" class="btn primary">Explorar campañas</a>
+    </div>
+  </section>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=400&q=80" alt="Reforestaci&oacute;n Patagonia" />
-        <h4>Reforestaci&oacute;n en Patagonia</h4>
-        <p>Meta: 5.000 &aacute;rboles nativos</p>
-        <a href="#" class="btn primary">Donar</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=400&q=80" alt="Protecci&oacute;n de humedales" />
-        <h4>Protecci&oacute;n de Humedales Urbanos</h4>
-        <p>Meta: Conservaci&oacute;n y educaci&oacute;n ambiental</p>
-        <a href="#" class="btn primary">Apoyar</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1602524818450-310f3b8c7f1e?auto=format&fit=crop&w=400&q=80" alt="Campa&ntilde;a de reciclaje" />
-        <h4>Campa&ntilde;a Nacional de Reciclaje</h4>
-        <p>Meta: 1.000 kits educativos</p>
-        <a href="#" class="btn primary">Sumarse</a>
-      </div>
-    </section>
-  </main>
+  <!-- CAMPAÑA DESTACADA MEJORADA -->
+<section class="featured-campaign">
+  <div class="featured-campaign-container">
+    <div class="featured-campaign-text">
+      <span class="featured-badge">🌱 Campaña destacada</span>
+      <h2 class="featured-campaign-title">Reforestación en Patagonia</h2>
+      <p class="featured-campaign-description">
+        Súmate a la restauración de los bosques nativos del sur de Chile. Queremos plantar <strong>5.000 árboles</strong> para devolver vida a ecosistemas degradados. ¡Cada aporte cuenta!
+      </p>
 
+      <div class="progress-bar-container">
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 72%;"></div>
+        </div>
+        <p class="progress-label">Meta alcanzada: <strong>72%</strong></p>
+      </div>
+
+      <a href="#" class="btn primary">💚 Donar ahora</a>
+    </div>
+
+    <div class="featured-campaign-image">
+      <img src="https://images.unsplash.com/photo-1580411196492-027c480950c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnV0YSUyMDQwJTJDJTIwcGF0YWdvbmlhJTIwJTJDJTIwYXJnZW50aW5hfGVufDB8fDB8fHww" alt="Campaña Patagonia" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- OTRAS CAMPAÑAS -->
+  <section class="product-grid centered" id="campanas">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=400&q=80" alt="Protección de humedales" />
+      <h4>Protección de Humedales Urbanos</h4>
+      <p style="color: var(--gray);">Meta: Conservación y educación ambiental</p>
+      <a href="#" class="btn primary">Apoyar</a>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=400&q=80" alt="Campaña de reciclaje" />
+      <h4>Campaña Nacional de Reciclaje</h4>
+      <p style="color: var(--gray);">Meta: 1.000 kits educativos</p>
+      <a href="#" class="btn primary">Sumarse</a>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1580411196492-027c480950c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnV0YSUyMDQwJTJDJTIwcGF0YWdvbmlhJTIwJTJDJTIwYXJnZW50aW5hfGVufDB8fDB8fHww" alt="Salvemos los polinizadores" />
+      <h4>Salvemos a los Polinizadores</h4>
+      <p style="color: var(--gray);">Meta: 200 jardines urbanos</p>
+      <a href="#" class="btn primary">Contribuir</a>
+    </div>
+  </section>
+
+ <!-- INVITACIÓN A CREAR CAMPAÑA -->
+<section class="create-campaign-section">
+  <div class="info-section">
+    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+    <h3 class="text-white">¿Tienes una causa verde?</h3>
+    <p class="text-white">
+      Si eres una ONG o emprendimiento verificado, puedes crear tu propia campaña ambiental. Comparte tu propósito y encuentra apoyo en la comunidad.
+    </p>
+    <a href="#" class="btn secondary">+ Crear campaña</a>
+  </div>
+</section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl &ndash; Juntos financiamos el cambio verde.</p>
+    <p>&copy; 2025 Biodiversidad.cl – Juntos financiamos el cambio verde.</p>
   </footer>
 </body>
 </html>

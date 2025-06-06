@@ -1,60 +1,73 @@
-<!-- informacion.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Informaci&oacute;n Ambiental - Biodiversidad.cl</title>
+  <title>Información Ambiental - Biodiversidad.cl</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="marketplace.html">Marketplace</a></li>
       <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educaci&oacute;n</a></li>
-      <li><a href="campanas.html">Campa&ntilde;as</a></li>
-      <li><a href="informacion.html">Informaci&oacute;n</a></li>
-      <li><a href="membresias.html">Membres&iacute;as</a></li>
+      <li><a href="educacion.html">Educación</a></li>
+      <li><a href="campanas.html">Campañas</a></li>
+      <li><a href="informacion.html">Información</a></li>
+      <li><a href="membresias.html">Membresías</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
       <li><a href="login.html" class="btn-login">Ingresar</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-leaf icon"></i>
-      <h2>Informaci&oacute;n Ambiental Abierta</h2>
-      <p>Conoce las leyes, especies y datos relevantes sobre el entorno natural chileno.</p>
-    </section>
+  <!-- HERO -->
+  <section class="hero-marketplace" style="background-image: url('https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1600&q=80'); background-size: cover;">
+    <div class="hero-overlay">
+      <h1>Información Ambiental Abierta</h1>
+      <p>Datos útiles, leyes, biodiversidad y recursos para empoderar a la ciudadanía ecológica.</p>
+    </div>
+  </section>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1577801598507-3d1a2f26b51c?auto=format&fit=crop&w=400&q=80" alt="Biodiversidad chilena" />
-        <h4>Flora y Fauna Chilena</h4>
-        <p>Descubre especies nativas y su importancia ecol&oacute;gica</p>
-        <a href="#" class="btn primary">Explorar</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1564866657315-1caaa9bceaf2?auto=format&fit=crop&w=400&q=80" alt="Normativas ambientales" />
-        <h4>Normativas Ambientales</h4>
-        <p>Legislaci&oacute;n explicada en lenguaje ciudadano</p>
-        <a href="#" class="btn primary">Ver leyes</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1485779583141-dac0a195fa42?auto=format&fit=crop&w=400&q=80" alt="Organismos p&uacute;blicos" />
-        <h4>Organismos P&uacute;blicos</h4>
-        <p>Enlaces a CONAF, MMA, SAG y otros recursos</p>
-        <a href="#" class="btn primary">Ir al sitio</a>
-      </div>
-    </section>
-  </main>
+  <!-- INFORMACIÓN -->
+  <section class="product-grid centered" style="padding: 3rem 1rem;">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1580411196492-027c480950c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnV0YSUyMDQwJTJDJTIwcGF0YWdvbmlhJTIwJTJDJTIwYXJnZW50aW5hfGVufDB8fDB8fHww" alt="Biodiversidad chilena" />
+      <h4>Flora y Fauna Chilena</h4>
+      <p>Explora especies nativas organizadas por región y categoría.</p>
+      <a href="#" class="btn primary">Explorar</a>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1580411196492-027c480950c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnV0YSUyMDQwJTJDJTIwcGF0YWdvbmlhJTIwJTJDJTIwYXJnZW50aW5hfGVufDB8fDB8fHww" alt="Normativas ambientales" />
+      <h4>Normativas Ambientales</h4>
+      <p>Legislación explicada en lenguaje simple para ciudadanos y emprendedores.</p>
+      <a href="#" class="btn primary">Ver leyes</a>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1580411196492-027c480950c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnV0YSUyMDQwJTJDJTIwcGF0YWdvbmlhJTIwJTJDJTIwYXJnZW50aW5hfGVufDB8fDB8fHww" alt="Organismos públicos" />
+      <h4>Organismos Públicos</h4>
+      <p>Accede rápidamente a sitios como CONAF, MMA, SAG y más.</p>
+      <a href="#" class="btn primary">Ir al sitio</a>
+    </div>
+  </section>
 
+  <!-- INVITACIÓN -->
+  <section class="create-campaign-section" >
+    <div class="info-section">
+      <div class="icon"><i class="fas fa-globe-americas"></i></div>
+      <h3 class="text-white">¿Tienes información ambiental que compartir?</h3>
+      <p class="text-white">Ayúdanos a construir una base de conocimiento abierta y actualizada para todos.</p>
+      <a href="#" class="btn secondary">+ Sugerir recurso</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl &ndash; Por una ciudadan&iacute;a informada y conectada con la naturaleza.</p>
+    <p>&copy; 2025 Biodiversidad.cl – Por una ciudadanía informada y conectada con la naturaleza.</p>
   </footer>
 </body>
 </html>

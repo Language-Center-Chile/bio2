@@ -1,4 +1,3 @@
-<!-- consultores.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,53 +6,86 @@
   <title>Red de Consultores - Biodiversidad.cl</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="marketplace.html">Marketplace</a></li>
       <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educaci&oacute;n</a></li>
-      <li><a href="campanas.html">Campa&ntilde;as</a></li>
-      <li><a href="informacion.html">Informaci&oacute;n</a></li>
-      <li><a href="membresias.html">Membres&iacute;as</a></li>
+      <li><a href="educacion.html">Educación</a></li>
+      <li><a href="campanas.html">Campañas</a></li>
+      <li><a href="informacion.html">Información</a></li>
+      <li><a href="membresias.html">Membresías</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="login.html" class="btn-login">Ingresar</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-user-tie icon"></i>
-      <h2>Red de Consultores Ambientales</h2>
-      <p>Conecta con expertos en medio ambiente para tus proyectos, estudios y cumplimiento normativo.</p>
-    </section>
+  <!-- HERO -->
+  <section class="hero-marketplace">
+    <div class="hero-overlay">
+      <h1>Red de Consultores Ambientales</h1>
+      <p>Encuentra profesionales para asesorarte en proyectos ecológicos, estudios técnicos y regulaciones.</p>
+      <div class="hero-search">
+        <select>
+          <option>Especialidad</option>
+          <option>Impacto Ambiental</option>
+          <option>Educación</option>
+          <option>Normativa</option>
+        </select>
+        <select>
+          <option>Región</option>
+          <option>Metropolitana</option>
+          <option>Valparaíso</option>
+          <option>Antofagasta</option>
+        </select>
+        <select>
+          <option>Modalidad</option>
+          <option>Presencial</option>
+          <option>Online</option>
+        </select>
+        <button class="btn primary">🔍 Buscar</button>
+      </div>
+    </div>
+  </section>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1603570419967-6fef8c236e38?auto=format&fit=crop&w=400&q=80" alt="Consultor 1" />
-        <h4>Mar&iacute;a Fernanda Rojas</h4>
-        <p>Especialista en Impacto Ambiental</p>
-        <a href="#" class="btn primary">Ver perfil</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=80" alt="Consultor 2" />
-        <h4>Ignacio P&eacute;rez</h4>
-        <p>Consultor en Legislaci&oacute;n Ambiental</p>
-        <a href="#" class="btn primary">Ver perfil</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Consultor 3" />
-        <h4>Sof&iacute;a Navarro</h4>
-        <p>Educadora Ambiental y Biodiversidad</p>
-        <a href="#" class="btn primary">Ver perfil</a>
-      </div>
-    </section>
-  </main>
+  <!-- LISTADO DE CONSULTORAS/ES -->
+  <section class="product-grid centered" style="padding: 3rem 1rem;">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlcnNvbmF8ZW58MHx8MHx8fDA%3D" alt="Consultor 1" />
+      <h4>María Fernanda Rojas</h4>
+      <p>Especialista en Impacto Ambiental</p>
+      <a href="#" class="btn primary">Ver perfil</a>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=80" alt="Consultor 2" />
+      <h4>Ignacio Pérez</h4>
+      <p>Consultor en Legislación Ambiental</p>
+      <a href="#" class="btn primary">Ver perfil</a>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Consultor 3" />
+      <h4>Sofía Navarro</h4>
+      <p>Educadora Ambiental y Biodiversidad</p>
+      <a href="#" class="btn primary">Ver perfil</a>
+    </div>
+  </section>
 
+  <!-- INVITACIÓN PUBLICAR OFERTA -->
+  <section class="create-campaign-section">
+    <div class="info-section">
+      <div class="icon"><i class="fas fa-briefcase"></i></div>
+      <h3 class="text-white">¿Representas una empresa o institución?</h3>
+      <p class="text-white">Publica una oferta laboral o convocatoria para consultores ambientales.</p>
+      <a href="#" class="btn secondary">+ Publicar oferta</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <p>&copy; 2025 Biodiversidad.cl &ndash; Conectando con especialistas por un futuro sostenible.</p>
   </footer>

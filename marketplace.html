@@ -5,60 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marketplace Verde - Biodiversidad.cl</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="marketplace.html">Marketplace</a></li>
       <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educaci&oacute;n</a></li>
-      <li><a href="campanas.html">Campa&ntilde;as</a></li>
-      <li><a href="informacion.html">Informaci&oacute;n</a></li>
-      <li><a href="membresias.html">Membres&iacute;as</a></li>
+      <li><a href="educacion.html">Educación</a></li>
+      <li><a href="campanas.html">Campañas</a></li>
+      <li><a href="informacion.html">Información</a></li>
+      <li><a href="membresias.html">Membresías</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="login.html" class="btn-login">Ingresar</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-store icon"></i>
-      <h2>Marketplace Verde</h2>
-      <p>Explora productos y servicios amigables con el medio ambiente.</p>
-      <div class="hero-cta">
-        <a href="#" class="btn primary"><i class="fas fa-filter"></i> Categor&iacute;a</a>
-        <a href="#" class="btn secondary"><i class="fas fa-map-marker-alt"></i> Regi&oacute;n</a>
-      </div>
-    </section>
+<!--HERO-->
+<section class="hero-marketplace">
+  <div class="hero-overlay">
+    <h1>Conecta con la naturaleza</h1>
+    <p>Más de 10.000 productos ecológicos y sustentables</p>
+    <div class="hero-search">
+      <select>
+        <option>Categoría</option>
+        <option>Cosmética</option>
+        <option>Alimentos</option>
+        <option>Artesanía</option>
+      </select>
+      <select>
+        <option>Región</option>
+        <option>Valparaíso</option>
+        <option>Antofagasta</option>
+      </select>
+      <button class="btn primary">🔍 Buscar</button>
+    </div>
+  </div>
+</section>
 
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584267388853-64a40ec6743e?auto=format&fit=crop&w=400&q=80" alt="Kit de Jardiner&iacute;a" />
-        <h4>Kit de Jardiner&iacute;a</h4>
-        <p>$12.000 CLP</p>
-        <a href="#" class="btn primary">Ver m&aacute;s</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1622234056455-9f1d4510fc38?auto=format&fit=crop&w=400&q=80" alt="Shampoo Natural" />
-        <h4>Shampoo Natural</h4>
-        <p>$6.500 CLP</p>
-        <a href="#" class="btn primary">Ver m&aacute;s</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1582462852231-2f46c07a798f?auto=format&fit=crop&w=400&q=80" alt="Compostera Dom&eacute;stica" />
-        <h4>Compostera Dom&eacute;stica</h4>
-        <p>$25.000 CLP</p>
-        <a href="#" class="btn primary">Ver m&aacute;s</a>
-      </div>
-    </section>
+
+
+ <section class="marketplace-layout">
+  <!-- FILTROS LATERALES -->
+  <aside class="filters-sidebar">
+
+  <!-- CATEGORÍAS -->
+  <div class="filters-group">
+    <h4 class="filters-title">Marketplace</h4>
+    <div class="filters-buttons">
+      <button class="filter-btn active"><i class="fas fa-globe-americas"></i> Todo</button>
+      <button class="filter-btn"><i class="fas fa-seedling"></i> Cosmética</button>
+      <button class="filter-btn"><i class="fas fa-apple-alt"></i> Alimentos</button>
+      <button class="filter-btn"><i class="fas fa-hands"></i> Artesanía</button>
+      <button class="filter-btn"><i class="fas fa-leaf"></i> Semillas</button>
+      <button class="filter-btn"><i class="fas fa-book"></i> Educación</button>
+    </div>
+  </div>
+
+  <!-- UBICACIÓN -->
+  <div class="filters-group">
+    <h4 class="filters-title">Ubicación</h4>
+    <div class="filters-region">
+      <label for="region-select"><i class="fas fa-map-marker-alt"></i> Región:</label>
+      <select id="region-select">
+        <option value="">Todas</option>
+        <option value="metropolitana">Metropolitana</option>
+        <option value="valparaiso">Valparaíso</option>
+        <option value="antofagasta">Antofagasta</option>
+        <option value="biobio">Biobío</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- FILTROS AVANZADOS -->
+  <div class="filters-group">
+    <h4 class="filters-title">Filtros avanzados</h4>
+    <div class="filters-region">
+      <label>Precio mínimo:</label>
+      <input type="number" placeholder="$0" class="filter-input" />
+      <label>Precio máximo:</label>
+      <input type="number" placeholder="$100.000" class="filter-input" />
+    </div>
+    <div class="filters-buttons text-white">
+      <label><input type="checkbox"  /> Envío gratis</label>
+      <label><input type="checkbox" /> Producto certificado</label>
+      <label><input type="checkbox" /> Disponible en stock</label>
+      <label><input type="checkbox" /> Solo emprendedores</label>
+    </div>
+  </div>
+
+  <!-- RECOMENDADOS -->
+  <div class="filters-group">
+    <h4 class="filters-title">Populares</h4>
+    <ul class="highlight-list text-white">
+      <li><i class="fas fa-star"></i> Shampoo de aloe vera</li>
+      <li><i class="fas fa-fire"></i> Compostera urbana</li>
+      <li><i class="fas fa-leaf"></i> Semillas de albahaca</li>
+    </ul>
+  </div>
+
+  <!-- BOTÓN -->
+  <div class="publish-button">
+    <a href="#publicar" class="btn secondary">+ Publicar producto</a>
+  </div>
+
+</aside>
+
+
+  <!-- PRODUCTOS -->
+  <main class="product-area">
+    <div id="productos" class="product-grid centered"></div>
   </main>
+</section>
 
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios create-campaign-section">
+    <blockquote>⭐⭐⭐ Excelente calidad y entrega rápida.</blockquote>
+    <blockquote>⭐⭐⭐ Apoyar a emprendedores verdes es lo mejor.</blockquote>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl &ndash; Apoyando el comercio justo y sustentable.</p>
+    <p>&copy; 2025 Biodiversidad.cl – Apoyando el comercio justo y sustentable.</p>
   </footer>
+
+<script>
+  const apiURL = 'https://6838f0f26561b8d882aea3c9.mockapi.io/bioMP';
+  const contenedor = document.getElementById('productos');
+
+  fetch(apiURL)
+    .then(res => res.json())
+    .then(data => {
+      contenedor.innerHTML = '';
+
+      data.forEach(producto => {
+        const nombre = producto.name || 'Sin nombre';
+        const precio = producto.price || '0';
+        const imagen = 'assets/news-2.jpg'; // imagen local
+
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${imagen}" alt="${nombre}" />
+          <h4>${nombre}</h4>
+          <p>$${precio} CLP</p>
+          <a href="#" class="btn secondary">Ver más</a>
+        `;
+        contenedor.appendChild(card);
+      });
+    })
+    .catch(() => {
+      contenedor.innerHTML = '<p style="color:red;">Error al cargar productos.</p>';
+    });
+</script>
+
+
+
 </body>
 </html>
