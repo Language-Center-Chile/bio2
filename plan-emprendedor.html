@@ -1,172 +1,320 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plan Emprendedor Verde - Biodiversidad.cl</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    body {
-      background: #f0f4f3;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emprendedor Verde - Biodiversidad.cl</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+<style>
+:root {
+  --primary: #4caf50;
+  --gray: #666;
+}
+body {
+  background: #f0f4f3;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.header-image {
+  width: 100%;
+  height: 220px;
+  background: url('./assets/featured/plan-emprendedor-banner.jpg') no-repeat center 30% / cover;
+}
+.plan-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.plan-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.plan-header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+.plan-header p {
+  color: var(--gray);
+}
+.plan-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+.benefit-item {
+  background: #f7fcf9;
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.benefit-item:hover { transform: translateY(-3px); }
+.benefit-item i {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+.plan-price {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #4caf50;
+}
+.plan-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+.plan-cta a.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #66bb6a, #81c784);
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+.plan-cta a.btn:hover {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  transform: scale(1.03);
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 2rem 0;
+  border-radius: 12px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.slider img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-    .plan-wrapper {
-      max-width: 900px;
-      margin: 4rem auto;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-      padding: 3rem 2rem;
-      animation: fadeIn 0.6s ease-in-out;
-    }
+@media (max-width: 768px) {
+  .plan-benefits {
+    grid-template-columns: 1fr;
+  }
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .plan-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .plan-header h1 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .plan-header p {
-      color: var(--gray);
-      font-size: 1rem;
-    }
-
-    .plan-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin: 2rem 0;
-    }
-
-    .benefit-item {
-      background: #f7fcf9;
-      border-left: 4px solid var(--primary);
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-      transition: transform 0.3s ease;
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-    }
-
-    .benefit-item:hover {
-      transform: translateY(-3px);
-    }
-
-    .benefit-item i {
-      color: var(--primary);
-      font-size: 1.2rem;
-    }
-
-    .plan-price {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin: 2rem 0 1rem;
-    }
-
-    .plan-cta {
-      text-align: center;
-    }
-
-    .plan-cta a.btn {
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      color: white;
-      background: linear-gradient(135deg, #4caf50, #81c784);
-      transition: background 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-    }
-
-    .plan-cta a.btn:hover {
-      background: linear-gradient(135deg, #43a047, #66bb6a);
-      transform: scale(1.03);
-    }
-
-    @media (max-width: 768px) {
-      .plan-benefits {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #4caf50;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  margin-bottom: 0.3rem;
+}
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #4caf50;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #4caf50;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+}
+</style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="marketplace.html">Marketplace</a></li>
-      <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educación</a></li>
-      <li><a href="campanas.html">Campañas</a></li>
-      <li><a href="informacion.html">Información</a></li>
-      <li><a href="membresias.html">Membresías</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="login.html" class="btn-login">Ingresar</a></li>
-    </ul>
-  </nav>
 
-  <main>
-    <section class="plan-wrapper">
-      <div class="plan-header">
-        <h1>Plan Emprendedor Verde</h1>
-        <p>Ideal para quienes comercializan productos sostenibles y buscan destacar.</p>
+<div class="header-image"></div>
+
+<section class="plan-wrapper">
+  <div class="plan-header">
+    <h1>Emprendedor Verde</h1>
+    <p>Ideal para vender productos ecológicos y destacar tu negocio.</p>
+  </div>
+
+  <div class="plan-benefits">
+    <div class="benefit-item"><i class="fas fa-leaf"></i> <span>Hasta 15 productos o servicios publicados.</span></div>
+    <div class="benefit-item"><i class="fas fa-user-check"></i> <span>Perfil personalizado con sello “Emprendimiento Verificado”.</span></div>
+    <div class="benefit-item"><i class="fas fa-chart-line"></i> <span>Estadísticas básicas de visitas y clics.</span></div>
+    <div class="benefit-item"><i class="fas fa-hands-helping"></i> <span>Participación en campañas y ferias digitales.</span></div>
+    <div class="benefit-item"><i class="fas fa-chalkboard-teacher"></i> <span>Talleres mensuales gratuitos.</span></div>
+    <div class="benefit-item"><i class="fas fa-phone"></i> <span>Soporte destacado y asesoría personalizada.</span></div>
+  </div>
+
+  <div class="plan-price">💰 $4.990 / mes</div>
+
+  <div class="plan-cta">
+    <a href="registro.html" class="btn">Unirme como Emprendedor</a>
+  </div>
+
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video explicativo" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <h2 style="text-align:center;">Galería</h2>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?business,green" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?eco,market" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?startup,sustainability" alt=""></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+</section>
+
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-logo">
+    <a href="index.html">
+      <img src="assets/featured/logo-biodiversidad.png" alt="Biodiversidad.cl" />
+    </a>
+  </div>
+  <div class="footer-links">
+    <div>
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="consultores.html">Consultores</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="campanas.html">Campañas</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="membresias.html">Membresías</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Redes Sociales</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>&copy; 2025 Biodiversidad.cl — Todos los derechos reservados.</p>
+</div>
+</footer>
 
-      <div class="plan-benefits">
-        <div class="benefit-item">
-          <i class="fas fa-store"></i>
-          <span>Publica tus productos sin límite en el Marketplace.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-user"></i>
-          <span>Perfil profesional con redes, descripción e imagen destacada.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-chart-line"></i>
-          <span>Accede a estadísticas de visualización y rendimiento.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-gift"></i>
-          <span>Participa en campañas promocionales y ferias digitales.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-headset"></i>
-          <span>Soporte personalizado y asesoría de bienvenida.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-handshake"></i>
-          <span>Conecta con una comunidad de consumidores conscientes.</span>
-        </div>
-      </div>
+<script>
+let currentIndex = 0;
+const slides = document.getElementById('slides');
+const totalSlides = slides.children.length;
 
-      <div class="plan-price">$4.990 CLP / mes</div>
+function showSlide(index) {
+  if(index < 0) currentIndex = totalSlides - 1;
+  else if(index >= totalSlides) currentIndex = 0;
+  else currentIndex = index;
+  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-      <div class="plan-cta">
-        <a href="registro.html" class="btn">Suscribirme ahora</a>
-      </div>
-    </section>
-  </main>
+function moveSlide(step) {
+  showSlide(currentIndex + step);
+}
+</script>
 
-  <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl – Haz crecer tu impacto sustentable.</p>
-  </footer>
 </body>
 </html>
-
