@@ -2,369 +2,258 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Membresías - Biodiversidad.cl</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Biodiversidad.cl – Inicio</title>
+<link rel="stylesheet" href="styles.css" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-<style>
-:root {
-  --primary: #4caf50;
-  --light-bg: #f4f4f4;
-  --dark-bg: #18181b;
-  --text-light: #fff;
-  --text-dark: #000;
-}
-body.light {
-  background-color: var(--light-bg);
-  color: var(--text-dark);
-}
-body.dark {
-  background-color: var(--dark-bg);
-  color: var(--text-light);
-}
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  transition: background 0.4s, color 0.4s;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: inherit;
-}
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.nav-links a {
-  text-decoration: none;
-  color: inherit;
-}
-.nav-links a:hover {
-  color: var(--primary);
-}
-.btn-login {
-  background-color: var(--primary);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 1rem;
-}
-.hero-marketplace {
-  background: url('https://plus.unsplash.com/premium_photo-1687525932455-4e8c83a4c0de?w=500') no-repeat center center;
-  background-size: cover;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-}
-.hero-overlay h1 {
-  font-size: 2rem;
-  color: #fff;
-}
-.hero-overlay p {
-  color: #c0ffc7;
-}
-.membership-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 3rem 1rem;
-}
-.membership-card {
-  background-color: #fff;
-  color: #000;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  padding: 1.5rem;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.membership-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-.membership-card h3 {
-  color: var(--primary);
-}
-.membership-card p {
-  color: #444;
-}
-.membership-card ul {
-  list-style: none;
-  padding: 0;
-}
-.membership-card ul li {
-  margin: 0.4rem 0;
-  color: #333;
-}
-.membership-price {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 1rem 0;
-}
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: transform 0.3s, background 0.3s;
-}
-.btn:hover {
-  background: #2e7d32;
-  transform: scale(1.05);
-}
-.toggle-mode {
-  cursor: pointer;
-  font-size: 0.9rem;
-  background: #eee;
-  color: #333;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-}
-body.dark .toggle-mode {
-  background: #444;
-  color: #fff;
-}
-/* Footer */
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 1rem 1rem;
-  font-size: 0.9rem;
-}
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-  align-items: flex-start;
-}
-.footer-logo img {
-  max-width: 150px;
-  margin-bottom: 1rem;
-}
-.footer-links {
-  display: flex;
-  gap: 4rem;
-  flex-wrap: wrap;
-}
-.footer-links h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  color: #4caf50;
-}
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-links ul li {
-  margin-bottom: 0.3rem;
-}
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer-links ul li a:hover {
-  color: #4caf50;
-}
-.social-icons a {
-  color: #fff;
-  font-size: 1.2rem;
-  margin-right: 0.7rem;
-  transition: color 0.3s;
-}
-.social-icons a:hover {
-  color: #4caf50;
-}
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  border-top: 1px solid #333;
-  padding-top: 1rem;
-  font-size: 0.85rem;
-  color: #ccc;
-}
-@media (max-width: 600px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-links {
-    justify-content: center;
-  }
-}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-<div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
-<ul class="nav-links">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="marketplace.html">Marketplace</a></li>
-<li><a href="consultores.html">Consultores</a></li>
-<li><a href="educacion.html">Educación</a></li>
-<li><a href="campanas.html">Campañas</a></li>
-<li><a href="informacion.html">Información</a></li>
-<li><a href="membresias.html">Membresías</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-<li><a href="login.html" class="btn-login">Ingresar</a></li>
-<li><span class="toggle-mode" onclick="toggleMode()">🌗 Modo</span></li>
-</ul>
+  <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+    <li><a href="marketplace.html">Marketplace</a></li>
+    <li><a href="consultores.html">Consultores</a></li>
+    <li><a href="educacion.html">Educación</a></li>
+    <li><a href="campanas.html">Campañas</a></li>
+    <li><a href="informacion.html">Información</a></li>
+    <li><a href="membresias.html">Membresías</a></li>
+    <li><a href="turismo.html">Turismo Sustentable</a></li>
+    <li><a href="ofertas-laborales.html">Ofertas Laborales</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="login.html" class="btn-login">Ingresar</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero-marketplace">
-<div class="hero-overlay">
-<h1>Planes de Membresía</h1>
-<p>Elige el plan que más se adapte a ti y potencia tu impacto ambiental.</p>
-</div>
+<header>
+  <div class="hero-slider">
+    <div class="hero-content">
+      <h1><span>Conectamos personas</span> con la biodiversidad</h1>
+      <p style="color: white;">Una plataforma sustentable, abierta y humana para el ecosistema verde.</p>
+      <div class="hero-cta">
+        <a href="marketplace.html" class="btn primary">Explorar</a>
+        <a href="login.html" class="btn primary">Ingresar</a>
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slide fade"><img src="assets/slider/biodiversidad1.jpg" alt="Biodiversidad Chilena"></div>
+      <div class="slide fade"><img src="assets/slider/biodiversidad2.jpg" alt="Flora Nativa"></div>
+      <div class="slide fade"><img src="assets/slider/biodiversidad3.jpg" alt="Fauna Chilena"></div>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="info-grid">
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/quienes-somos.jpg" alt="Quiénes Somos" class="section-image" />
+      <div class="image-text">
+        <h2>Quiénes Somos</h2>
+        <p>Conectamos personas con el medio ambiente, ofreciendo soluciones, educación, comercio y comunidad para un mundo más verde.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/market.png" alt="Marketplace Verde" class="section-image" />
+      <div class="image-text">
+        <h2>Marketplace Verde</h2>
+        <p>Compra y vende productos ecológicos en un solo lugar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/red_consultores.png" alt="Red de Consultores" class="section-image" />
+      <div class="image-text">
+        <h2>Red de Consultores</h2>
+        <p>Encuentra expertos ambientales y publica tus proyectos sostenibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/educacion.png" alt="Educación Ambiental" class="section-image" />
+      <div class="image-text">
+        <h2>Educación Ambiental</h2>
+        <p>Aprende y comparte sobre sostenibilidad con nuestra comunidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/campaña.png" alt="Campañas de Apoyo" class="section-image" />
+      <div class="image-text">
+        <h2>Campañas de Apoyo</h2>
+        <p>Contribuye con proyectos verdes y causas ambientales en curso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/turismo.jpg" alt="Turismo Sustentable" class="section-image" />
+      <div class="image-text">
+        <h2>Turismo Sustentable</h2>
+        <p>Explora destinos responsables que cuidan la biodiversidad y a las comunidades locales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="image-container">
+      <img src="./assets/category/ofertas-laborales.jpg" alt="Ofertas Laborales" class="section-image" />
+      <div class="image-text">
+        <h2>Ofertas Laborales</h2>
+        <p>Encuentra empleo en empresas e instituciones comprometidas con el medio ambiente.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="featured-content">
+  <div class="container">
+    <span class="featured-label">Contenido destacado</span>
+    <div class="featured-card">
+      <div class="featured-image">
+        <img src="assets/featured/chakana.jpg" alt="Chakana o Cruz Andina">
+      </div>
+      <div class="featured-info">
+        <div class="category-tag">Arte, Cultura y Patrimonio</div>
+        <h2>Chakana o Cruz Andina: equilibrio ancestral en tiempos modernos</h2>
+        <p>La Chakana o Cruz Andina simboliza la unión entre la tierra y el sol, invitándonos a reconectarnos con lo esencial y preservar la biodiversidad.</p>
+        <a href="#" class="read-more">Leer artículo</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- PLANES -->
-<section class="membership-grid">
-<div class="membership-card">
-<h3>Gratuito</h3>
-<p>Para ciudadanos comprometidos con el medio ambiente.</p>
-<ul>
-<li>✅ Lectura del blog</li>
-<li>✅ Donaciones a campañas</li>
-<li>✅ Publicar 1 producto</li>
-</ul>
-<div class="membership-price">$0 / mes</div>
-<a href="plan-gratuito.html" class="btn">Seleccionar</a>
-</div>
+<section class="news-blog-section">
+  <div class="container">
+    <h2>Últimas Noticias y Artículos</h2>
+    <div class="content-grid">
 
-<div class="membership-card">
-<h3>Emprendedor Verde</h3>
-<p>Ideal para vender productos ecológicos y destacar tu negocio.</p>
-<ul>
-<li>✅ Hasta 15 productos</li>
-<li>✅ Perfil personalizado</li>
-<li>✅ Soporte destacado</li>
-</ul>
-<div class="membership-price">$4.990 / mes</div>
-<a href="plan-emprendedor.html" class="btn">Seleccionar</a>
-</div>
+      <div class="news-container">
+        <article class="content-card">
+          <img src="assets/news-1.jpg">
+          <div class="card-content">
+            <h3>Conservación de Especies Nativas</h3>
+            <p>Proyectos para proteger la flora endémica de Chile.</p>
+            <a href="#" class="read-more">Leer más</a>
+          </div>
+        </article>
+        <article class="content-card">
+          <img src="assets/news-2.jpg" alt="Noticia 2">
+          <div class="card-content">
+            <h3>Iniciativas Sustentables</h3>
+            <p>Comunidades locales implementan proyectos verdes.</p>
+            <a href="#" class="read-more">Leer más</a>
+          </div>
+        </article>
+      </div>
 
-<div class="membership-card">
-<h3>Consultor Pro</h3>
-<p>Para profesionales que quieren llegar a más instituciones.</p>
-<ul>
-<li>✅ Perfil profesional avanzado</li>
-<li>✅ Acceso ilimitado a ofertas laborales</li>
-<li>✅ Certificados descargables</li>
-</ul>
-<div class="membership-price">$6.990 / mes</div>
-<a href="plan-consultor.html" class="btn">Seleccionar</a>
-</div>
-
-<div class="membership-card">
-<h3>Empresa Verde</h3>
-<p>Para empresas que buscan talento y visibilidad.</p>
-<ul>
-<li>✅ Publicaciones ilimitadas</li>
-<li>✅ Dashboard corporativo</li>
-<li>✅ Informes de impacto</li>
-</ul>
-<div class="membership-price">$15.000 / mes</div>
-<a href="plan-empresa.html" class="btn">Seleccionar</a>
-</div>
-
-<div class="membership-card">
-<h3>Blog Verde</h3>
-<p>Comparte tu historia en nuestro blog por 3 meses.</p>
-<ul>
-<li>✅ 2 publicaciones mensuales</li>
-<li>✅ Difusión en redes sociales</li>
-<li>✅ Asesoría en redacción</li>
-</ul>
-<div class="membership-price">$1.990 / mes</div>
-<a href="plan-blog.html" class="btn">Seleccionar</a>
-</div>
+      <div class="blog-container">
+        <article class="content-card">
+          <img src="assets/blog-1.png" alt="Blog 1">
+          <div class="card-content">
+            <h3>Guía de Compostaje</h3>
+            <p>Aprende a crear tu propio compost en casa.</p>
+            <a href="#" class="read-more">Leer más</a>
+          </div>
+        </article>
+        <article class="content-card">
+          <img src="assets/blog-2.jpg" alt="Blog 2">
+          <div class="card-content">
+            <h3>Biodiversidad Urbana</h3>
+            <p>Cómo crear espacios verdes en la ciudad.</p>
+            <a href="#" class="read-more">Leer más</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-<div class="footer-container">
-  <div class="footer-logo">
-    <a href="index.html">
-      <img src="TU_LOGO_URL" alt="Biodiversidad.cl" />
-    </a>
-  </div>
-  <div class="footer-links">
-    <div>
-      <h4>Secciones</h4>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="marketplace.html">Marketplace</a></li>
-        <li><a href="consultores.html">Consultores</a></li>
-        <li><a href="educacion.html">Educación</a></li>
-        <li><a href="campanas.html">Campañas</a></li>
-        <li><a href="informacion.html">Información</a></li>
-        <li><a href="membresias.html">Membresías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="assets/featured/logo-biodiversidad.png" alt="Biodiversidad.cl" />
+      </a>
     </div>
-    <div>
-      <h4>Redes Sociales</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+    <div class="footer-links">
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="consultores.html">Consultores</a></li>
+          <li><a href="educacion.html">Educación</a></li>
+          <li><a href="campanas.html">Campañas</a></li>
+          <li><a href="membresias.html">Membresías</a></li>
+          <li><a href="turismo.html">Turismo Sustentable</a></li>
+          <li><a href="ofertas-laborales.html">Ofertas Laborales</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes Sociales</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="footer-bottom">
-  <p>&copy; 2025 Biodiversidad.cl — Todos los derechos reservados.</p>
-</div>
+  <div class="footer-bottom">
+    <p>© 2025 Biodiversidad.cl — Todos los derechos reservados.</p>
+  </div>
 </footer>
 
 <script>
-function toggleMode() {
-  const body = document.body;
-  if (body.classList.contains("dark")) {
-    body.classList.remove("dark");
-    body.classList.add("light");
-  } else if (body.classList.contains("light")) {
-    body.classList.remove("light");
-    body.classList.add("dark");
-  } else {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      body.classList.add("light");
-    } else {
-      body.classList.add("dark");
-    }
-  }
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+  showSlides(slideIndex += n);
 }
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+setInterval(() => changeSlide(1), 5000);
 </script>
 
 </body>
