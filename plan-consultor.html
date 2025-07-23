@@ -22,6 +22,7 @@ body {
   background: url('./assets/featured/plan-consultor-banner.png') no-repeat center center / contain;
   background-color: #f0f4f3;
 }
+
 @media (max-width: 768px) {
   .header-image {
     height: 200px;
@@ -29,6 +30,7 @@ body {
     background-position: center top;
   }
 }
+
 .plan-wrapper {
   max-width: 900px;
   margin: 2rem auto;
@@ -151,6 +153,81 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #4caf50;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  margin-bottom: 0.3rem;
+}
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #4caf50;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #4caf50;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+}
 </style>
 </head>
 <body>
@@ -160,16 +237,16 @@ body {
 <section class="plan-wrapper">
   <div class="plan-header">
     <h1>Consultor Pro</h1>
-    <p>Para profesionales que quieren llegar a más instituciones.</p>
+    <p>Para profesionales que quieren llegar a más instituciones y potenciar su impacto ambiental.</p>
   </div>
 
   <div class="plan-benefits">
-    <div class="benefit-item"><i class="fas fa-user-tie"></i> <span>Perfil avanzado con CV, diplomas y casos de éxito.</span></div>
-    <div class="benefit-item"><i class="fas fa-briefcase"></i> <span>Acceso ilimitado a ofertas laborales.</span></div>
-    <div class="benefit-item"><i class="fas fa-search"></i> <span>Inclusión en el buscador avanzado de expertos.</span></div>
-    <div class="benefit-item"><i class="fas fa-calendar-alt"></i> <span>Calendario integrado con Google Calendar.</span></div>
-    <div class="benefit-item"><i class="fas fa-award"></i> <span>Certificados descargables y estadísticas.</span></div>
-    <div class="benefit-item"><i class="fas fa-chalkboard-teacher"></i> <span>Acceso gratuito a cursos y talleres especializados.</span></div>
+    <div class="benefit-item"><i class="fas fa-user-tie"></i> <span>Perfil profesional destacado.</span></div>
+    <div class="benefit-item"><i class="fas fa-briefcase"></i> <span>Acceso ilimitado a ofertas laborales verdes.</span></div>
+    <div class="benefit-item"><i class="fas fa-certificate"></i> <span>Certificados descargables de participación.</span></div>
+    <div class="benefit-item"><i class="fas fa-network-wired"></i> <span>Networking con instituciones y empresas.</span></div>
+    <div class="benefit-item"><i class="fas fa-lightbulb"></i> <span>Participación en consultorías colaborativas.</span></div>
+    <div class="benefit-item"><i class="fas fa-chalkboard-teacher"></i> <span>Acceso a webinars y capacitaciones exclusivas.</span></div>
   </div>
 
   <div class="plan-price">💰 $6.990 / mes</div>
@@ -185,9 +262,9 @@ body {
   <h2 style="text-align:center;">Galería</h2>
   <div class="slider">
     <div class="slides" id="slides">
-      <div class="slide"><img src="https://source.unsplash.com/800x400/?consulting,professional" alt=""></div>
-      <div class="slide"><img src="https://source.unsplash.com/800x400/?business,meeting" alt=""></div>
-      <div class="slide"><img src="https://source.unsplash.com/800x400/?expertise,team" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?consultant,work" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?team,environment" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?office,green" alt=""></div>
     </div>
     <button class="prev" onclick="moveSlide(-1)">❮</button>
     <button class="next" onclick="moveSlide(1)">❯</button>
@@ -195,41 +272,41 @@ body {
 </section>
 
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <a href="index.html">
-        <img src="assets/featured/logo-biodiversidad.png" alt="Biodiversidad.cl" />
-      </a>
+<div class="footer-container">
+  <div class="footer-logo">
+    <a href="index.html">
+      <img src="assets/featured/logo-biodiversidad.png" alt="Biodiversidad.cl" />
+    </a>
+  </div>
+  <div class="footer-links">
+    <div>
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="consultores.html">Consultores</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="campanas.html">Campañas</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="membresias.html">Membresías</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </div>
-    <div class="footer-links">
-      <div>
-        <h4>Secciones</h4>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="marketplace.html">Marketplace</a></li>
-          <li><a href="consultores.html">Consultores</a></li>
-          <li><a href="educacion.html">Educación</a></li>
-          <li><a href="campanas.html">Campañas</a></li>
-          <li><a href="informacion.html">Información</a></li>
-          <li><a href="membresias.html">Membresías</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Redes Sociales</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
+    <div>
+      <h4>Redes Sociales</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Biodiversidad.cl — Todos los derechos reservados.</p>
-  </div>
+</div>
+<div class="footer-bottom">
+  <p>&copy; 2025 Biodiversidad.cl — Todos los derechos reservados.</p>
+</div>
 </footer>
 
 <script>
