@@ -1,164 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plan Gratuito - Biodiversidad.cl</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    body {
-      background: #f0f4f3;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membresía Gratuita</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h1 {
+  color: #4caf50;
+  text-align: center;
+}
+p {
+  line-height: 1.6;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.slider img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-    .plan-wrapper {
-      max-width: 900px;
-      margin: 4rem auto;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-      padding: 3rem 2rem;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .plan-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .plan-header h1 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .plan-header p {
-      color: var(--gray);
-      font-size: 1rem;
-    }
-
-    .plan-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin: 2rem 0;
-    }
-
-    .benefit-item {
-      background: #f7fcf9;
-      border-left: 4px solid var(--primary);
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-      transition: transform 0.3s ease;
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-    }
-
-    .benefit-item:hover {
-      transform: translateY(-3px);
-    }
-
-    .benefit-item i {
-      color: var(--primary);
-      font-size: 1.2rem;
-    }
-
-    .plan-price {
-      text-align: center;
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      color: #4caf50;
-    }
-
-    .plan-cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .plan-cta a.btn {
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      color: white;
-      background: linear-gradient(135deg, #66bb6a, #81c784);
-      transition: background 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-    }
-
-    .plan-cta a.btn:hover {
-      background: linear-gradient(135deg, #43a047, #66bb6a);
-      transform: scale(1.03);
-    }
-
-    @media (max-width: 768px) {
-      .plan-benefits {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #4caf50;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  margin-bottom: 0.3rem;
+}
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #4caf50;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #4caf50;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+}
+</style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="marketplace.html">Marketplace</a></li>
-      <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educación</a></li>
-      <li><a href="campanas.html">Campañas</a></li>
-      <li><a href="informacion.html">Información</a></li>
-      <li><a href="membresias.html">Membresías</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="login.html" class="btn-login">Ingresar</a></li>
-    </ul>
-  </nav>
 
-  <main>
-    <section class="plan-wrapper">
-      <div class="plan-header">
-        <h1>Plan Gratuito</h1>
-        <p>Accede al contenido abierto de la plataforma y participa como miembro de nuestra comunidad.</p>
+<div class="container">
+<h1>Membresía Gratuita</h1>
+<p><strong>Precio:</strong> $0 / mes</p>
+<p>Para ciudadanos comprometidos con el medio ambiente.</p>
+<p>Gracias por elegir la membresía gratuita. Este plan te permite acceder a nuestra comunidad y comenzar a explorar lo que Biodiversidad.cl tiene para ofrecer.</p>
+
+<ul>
+<li>✅ Lectura ilimitada del blog y acceso a recursos educativos.</li>
+<li>✅ Donaciones a campañas ambientales.</li>
+<li>✅ Publicar 1 producto o servicio.</li>
+<li>✅ Perfil básico con visibilidad inicial.</li>
+<li>✅ Postulación a hasta 2 ofertas laborales/mes.</li>
+<li>✅ Webinars introductorios y cápsulas educativas.</li>
+</ul>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Explicativo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h2>Galería</h2>
+<div class="slider">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,1" alt=""></div>
+    <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,2" alt=""></div>
+    <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,3" alt=""></div>
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
+</div>
+
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-logo">
+    <a href="index.html">
+      <img src="TU_LOGO_URL" alt="Biodiversidad.cl" />
+    </a>
+  </div>
+  <div class="footer-links">
+    <div>
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="consultores.html">Consultores</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="campanas.html">Campañas</a></li>
+        <li><a href="informacion.html">Información</a></li>
+        <li><a href="membresias.html">Membresías</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Redes Sociales</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>&copy; 2025 Biodiversidad.cl — Todos los derechos reservados.</p>
+</div>
+</footer>
 
-      <div class="plan-benefits">
-        <div class="benefit-item">
-          <i class="fas fa-book-open"></i>
-          <span>Acceso libre al blog y artículos educativos.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-donate"></i>
-          <span>Participa donando en campañas ambientales.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-eye"></i>
-          <span>Explora productos y consultores sin publicar.</span>
-        </div>
-        <div class="benefit-item">
-          <i class="fas fa-leaf"></i>
-          <span>Forma parte de la comunidad ambiental sin costo.</span>
-        </div>
-      </div>
+<script>
+let currentIndex = 0;
+const slides = document.getElementById('slides');
+const totalSlides = slides.children.length;
 
-      <div class="plan-price">Gratis para siempre</div>
+function showSlide(index) {
+  if(index < 0) currentIndex = totalSlides - 1;
+  else if(index >= totalSlides) currentIndex = 0;
+  else currentIndex = index;
+  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-      <div class="plan-cta">
-        <a href="registro.html" class="btn">Unirme Gratis</a>
-      </div>
-    </section>
-  </main>
+function moveSlide(step) {
+  showSlide(currentIndex + step);
+}
+</script>
 
-  <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl – Comunidad abierta para un futuro sostenible.</p>
-  </footer>
 </body>
 </html>
