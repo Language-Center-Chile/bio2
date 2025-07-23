@@ -3,38 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Membresía Gratuita</title>
+<title>Plan Gratuito - Biodiversidad.cl</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 <style>
+:root {
+  --primary: #4caf50;
+  --gray: #666;
+}
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  background: #f0f4f3;
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
-.container {
+.plan-wrapper {
   max-width: 900px;
-  margin: 2rem auto;
-  background: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 4rem auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2rem;
+  animation: fadeIn 0.6s ease-in-out;
 }
-h1 {
-  color: #4caf50;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.plan-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
-p {
-  line-height: 1.6;
+.plan-header h1 {
+  font-size: 2rem;
+  color: var(--primary);
 }
-ul {
-  list-style: none;
-  padding: 0;
+.plan-header p {
+  color: var(--gray);
 }
-ul li {
-  margin-bottom: 0.5rem;
+.plan-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+.benefit-item {
+  background: #f7fcf9;
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.benefit-item:hover { transform: translateY(-3px); }
+.benefit-item i {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+.plan-price {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #4caf50;
+}
+.plan-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+.plan-cta a.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #66bb6a, #81c784);
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+.plan-cta a.btn:hover {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  transform: scale(1.03);
 }
 .video-container {
   position: relative;
@@ -42,7 +93,7 @@ ul li {
   height: 0;
   overflow: hidden;
   margin: 2rem 0;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 .video-container iframe {
   position: absolute;
@@ -52,7 +103,7 @@ ul li {
 .slider {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-top: 2rem;
 }
 .slides {
@@ -81,6 +132,12 @@ ul li {
 }
 .prev { left: 10px; }
 .next { right: 10px; }
+
+@media (max-width: 768px) {
+  .plan-benefits {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Footer */
 .footer {
@@ -160,36 +217,40 @@ ul li {
 </head>
 <body>
 
-<div class="container">
-<h1>Membresía Gratuita</h1>
-<p><strong>Precio:</strong> $0 / mes</p>
-<p>Para ciudadanos comprometidos con el medio ambiente.</p>
-<p>Gracias por elegir la membresía gratuita. Este plan te permite acceder a nuestra comunidad y comenzar a explorar lo que Biodiversidad.cl tiene para ofrecer.</p>
-
-<ul>
-<li>✅ Lectura ilimitada del blog y acceso a recursos educativos.</li>
-<li>✅ Donaciones a campañas ambientales.</li>
-<li>✅ Publicar 1 producto o servicio.</li>
-<li>✅ Perfil básico con visibilidad inicial.</li>
-<li>✅ Postulación a hasta 2 ofertas laborales/mes.</li>
-<li>✅ Webinars introductorios y cápsulas educativas.</li>
-</ul>
-
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Explicativo" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<h2>Galería</h2>
-<div class="slider">
-  <div class="slides" id="slides">
-    <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,1" alt=""></div>
-    <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,2" alt=""></div>
-    <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,3" alt=""></div>
+<section class="plan-wrapper">
+  <div class="plan-header">
+    <h1>Plan Gratuito</h1>
+    <p>Accede al contenido abierto de la plataforma y participa como miembro de nuestra comunidad.</p>
   </div>
-  <button class="prev" onclick="moveSlide(-1)">❮</button>
-  <button class="next" onclick="moveSlide(1)">❯</button>
-</div>
-</div>
+
+  <div class="plan-benefits">
+    <div class="benefit-item"><i class="fas fa-book-open"></i> <span>Lectura ilimitada del blog y recursos educativos.</span></div>
+    <div class="benefit-item"><i class="fas fa-donate"></i> <span>Participa donando en campañas ambientales.</span></div>
+    <div class="benefit-item"><i class="fas fa-eye"></i> <span>Publica 1 producto o servicio en el Marketplace.</span></div>
+    <div class="benefit-item"><i class="fas fa-user"></i> <span>Postula a 2 ofertas laborales al mes.</span></div>
+  </div>
+
+  <div class="plan-price">💰 Gratis para siempre</div>
+
+  <div class="plan-cta">
+    <a href="registro.html" class="btn">Unirme Gratis</a>
+  </div>
+
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video explicativo" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <h2 style="text-align:center;">Galería</h2>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,1" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,2" alt=""></div>
+      <div class="slide"><img src="https://source.unsplash.com/800x400/?nature,3" alt=""></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+</section>
 
 <footer class="footer">
 <div class="footer-container">
