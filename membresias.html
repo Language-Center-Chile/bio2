@@ -1,80 +1,235 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Membresías - Biodiversidad.cl</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BioData - Planes y Precios</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec37",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112214",
+              "card-dark": "#19331e",
+              "border-green": "#32673b",
+              "text-secondary": "#92c99b",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: "Space Grotesk", "Noto Sans", sans-serif;
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #112214; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #32673b; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #13ec37; 
+        }
+    </style>
 </head>
-<body>
-  <nav class="navbar">
-    <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="marketplace.html">Marketplace</a></li>
-      <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educación</a></li>
-      <li><a href="campanas.html">Campañas</a></li>
-      <li><a href="informacion.html">Información</a></li>
-      <li><a href="membresias.html">Membresías</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="login.html" class="btn-login">Ingresar</a></li>
-    </ul>
-  </nav>
+<body class="bg-background-dark text-white min-h-screen flex flex-col overflow-x-hidden">
+<main class="flex-grow flex flex-col items-center">
+<!-- Hero Heading -->
+<section class="w-full max-w-[1280px] px-6 py-12 md:py-20 flex flex-col items-center text-center">
+<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4 text-white">
+                Elige tu impacto en la <span class="text-primary">biodiversidad</span>
+</h1>
+<p class="text-text-secondary text-lg md:text-xl max-w-2xl font-normal leading-relaxed">
+                Únete a nuestra misión de proteger el planeta. Desde estudiantes curiosos hasta grandes instituciones, tenemos un plan para potenciar tu contribución.
+            </p>
+</section>
+<!-- Pricing Cards -->
+<section class="w-full max-w-[1280px] px-6 pb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+<!-- Basic Plan -->
+<div class="flex flex-col rounded-xl border border-border-green bg-card-dark p-8 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-2 text-text-secondary">
+<span class="material-symbols-outlined">clover_spark</span>
+<h3 class="text-lg font-bold">Semilla</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-5xl font-black tracking-tight">Gratis</span>
+<span class="text-gray-400 font-medium">/siempre</span>
+</div>
+<p class="text-sm text-gray-400 mt-2">Para entusiastas que comienzan su viaje.</p>
+</div>
+<button class="w-full rounded-lg h-12 bg-[#234829] hover:bg-[#2f5e36] text-white font-bold mb-8 transition-colors">
+                        Empezar Ahora
+                    </button>
+<div class="flex flex-col gap-4 text-sm text-gray-300">
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Acceso a mapas de distribución básicos</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Boletín mensual de descubrimientos</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Acceso a la comunidad pública</span>
+</div>
+<div class="flex gap-3 items-start text-gray-600">
+<span class="material-symbols-outlined shrink-0">cancel</span>
+<span>Sin acceso a datos crudos</span>
+</div>
+</div>
+</div>
+<!-- Pro Plan (Highlighted) -->
+<div class="relative flex flex-col rounded-xl border-2 border-primary bg-card-dark p-8 hover:transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 lg:-mt-4 lg:mb-4 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-[#112214] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                        Recomendado
+                    </div>
+<div class="mb-6">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">nature</span>
+<h3 class="text-lg font-bold">Brote</h3>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-5xl font-black tracking-tight">$10</span>
+<span class="text-gray-400 font-medium">/mes</span>
+</div>
+<p class="text-sm text-gray-400 mt-2">Herramientas avanzadas para colaboradores activos.</p>
+</div>
+<button class="w-full rounded-lg h-12 bg-primary hover:bg-[#0fd630] text-[#112214] font-bold mb-8 transition-colors shadow-lg shadow-primary/20">
+                        Seleccionar Brote
+                    </button>
+<div class="flex flex-col gap-4 text-sm text-gray-200">
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Todo lo incluido en Semilla</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Descarga de datos avanzados (CSV/JSON)</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Navegación sin publicidad</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">verified</span>
+<span class="font-semibold text-primary">Insignia de colaborador verificada</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Soporte técnico prioritario</span>
+</div>
+</div>
+</div>
+<!-- Enterprise Plan -->
+<div class="flex flex-col rounded-xl border border-border-green bg-card-dark p-8 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-2 text-text-secondary">
+<span class="material-symbols-outlined">forest</span>
+<h3 class="text-lg font-bold">Bosque</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-5xl font-black tracking-tight">$50</span>
+<span class="text-gray-400 font-medium">/mes</span>
+</div>
+<p class="text-sm text-gray-400 mt-2">Para organizaciones y patrocinadores serios.</p>
+</div>
+<button class="w-full rounded-lg h-12 bg-[#234829] hover:bg-[#2f5e36] text-white font-bold mb-8 transition-colors">
+                        Contribuir
+                    </button>
+<div class="flex flex-col gap-4 text-sm text-gray-300">
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Acceso completo a API REST</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Reportes de impacto exclusivos</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Contacto directo con investigadores</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Menciones en publicaciones anuales</span>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span>Licencia para uso comercial de datos</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="w-full max-w-[800px] px-6 py-12 border-t border-border-green/30">
+<h2 class="text-3xl font-bold text-center mb-10 tracking-tight">Preguntas Frecuentes</h2>
+<div class="flex flex-col gap-4">
+<details class="group rounded-lg border border-border-green bg-card-dark open:bg-[#1f4025] transition-colors">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 outline-none">
+<span class="text-white font-medium">¿A qué se destinan los fondos?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-secondary text-sm leading-relaxed">
+                        El 100% de las suscripciones se reinvierten en el mantenimiento de servidores, la validación de datos por expertos y el apoyo a expediciones de campo para recolectar nueva información sobre especies amenazadas.
+                    </div>
+</details>
+<details class="group rounded-lg border border-border-green bg-card-dark open:bg-[#1f4025] transition-colors">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 outline-none">
+<span class="text-white font-medium">¿Puedo cancelar mi suscripción en cualquier momento?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-secondary text-sm leading-relaxed">
+                        Sí, puedes cancelar o pausar tu suscripción en cualquier momento desde tu panel de usuario. Tu acceso a las funciones premium continuará hasta el final del periodo de facturación actual.
+                    </div>
+</details>
+<details class="group rounded-lg border border-border-green bg-card-dark open:bg-[#1f4025] transition-colors">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 outline-none">
+<span class="text-white font-medium">¿Los planes incluyen acceso a la base de datos completa?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-secondary text-sm leading-relaxed">
+                        El plan Semilla ofrece visualizaciones limitadas. El plan Brote permite descargar conjuntos de datos seleccionados. Solo el plan Bosque y los convenios institucionales tienen acceso irrestricto a la base de datos cruda vía API.
+                    </div>
+</details>
+<details class="group rounded-lg border border-border-green bg-card-dark open:bg-[#1f4025] transition-colors">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 outline-none">
+<span class="text-white font-medium">¿Ofrecen descuentos para estudiantes?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-secondary text-sm leading-relaxed">
+                        Absolutamente. Creemos en la educación accesible. Si tienes un correo electrónico institucional (.edu), puedes solicitar un descuento del 50% en el plan Brote contactando a nuestro soporte.
+                    </div>
+</details>
+</div>
+</section>
+</main>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-id-card icon"></i>
-      <h2>Planes de Membresía</h2>
-      <p>Elige el plan que mejor se adapte a tus necesidades y accede a beneficios exclusivos.</p>
-    </section>
-
-    <section class="membership-grid">
-      <div class="membership-card">
-        <h3>Gratuito</h3>
-        <p>Acceso a contenidos abiertos, blog y eventos generales.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Lectura del blog</li>
-          <li><i class="fas fa-check-circle"></i> Donaciones a campañas</li>
-          <li><i class="fas fa-times-circle"></i> Publicación de productos</li>
-        </ul>
-        <div class="membership-price">$0 / mes</div>
-        <a href="plan-gratuito.html" class="btn primary">Seleccionar</a>
-
-      </div>
-
-      <div class="membership-card">
-        <h3>Emprendedor Verde</h3>
-        <p>Ideal para quienes venden productos ecológicos o artesanales.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Publicar productos</li>
-          <li><i class="fas fa-check-circle"></i> Perfil personalizado</li>
-          <li><i class="fas fa-check-circle"></i> Soporte destacado</li>
-        </ul>
-        <div class="membership-price">$4.990 / mes</div>
-        <a href="plan-emprendedor.html" class="btn primary">Seleccionar</a>
-
-      </div>
-
-      <div class="membership-card">
-        <h3>Consultor Pro</h3>
-        <p>Para especialistas ambientales que desean ampliar su red.</p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Perfil profesional</li>
-          <li><i class="fas fa-check-circle"></i> Acceso a ofertas</li>
-          <li><i class="fas fa-check-circle"></i> Certificados descargables</li>
-        </ul>
-        <div class="membership-price">$6.990 / mes</div>
-        <a href="plan-consultor.html" class="btn primary">Seleccionar</a>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl – Súmate a la comunidad y haz la diferencia.</p>
-  </footer>
-</body>
-</html>
+</body></html>
