@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil y Gestión de Membresía | BioDiversity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25f46a",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .custom-checkbox-tick {
+            --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(16,34,22)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#22492f] px-6 py-3 lg:px-40 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] font-display">BioDiversity</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-primary/70 flex border-none bg-slate-100 dark:bg-[#22492f] items-center justify-center pl-4 rounded-l-lg" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-100 dark:bg-[#22492f] focus:border-none h-full placeholder:text-slate-400 dark:placeholder:text-[#90cba4] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal font-display" placeholder="Explorar especies..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 lg:gap-8 items-center">
+<nav class="hidden lg:flex items-center gap-9">
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Biodiversidad</a>
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Comunidad</a>
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Mapa</a>
+<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Recursos</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Mi Perfil</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile avatar with nature theme" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbBMW_MAbjUfC9_uW0Tvi_H7OFyDgPBhCDXg2qYJoxSpR5evv2SppkMkXmNs_KCgSSxNYbp-SmkDs9X68cmN_cO2Nejt95v8DU4Msh7mHzaBvmcVNj8TuOt6KEuPJC1LKs40avn4JKRnG8IxTxViFogAaRgg4_ymYdceiG3OxfgXF6hX-UQUQ4yoYdFTHPjtnXKKtPr-nwcQ2NFKIZKOfD_HjALbnuVL_N7pcBWyknpiqCGbIvwZ1jhRE2O--C-pbtYgzt6YAPPik");'></div>
+</div>
+</header>
+<main class="flex flex-col items-center">
+<div class="layout-content-container flex flex-col max-w-[960px] w-full flex-1 px-4 lg:px-0 py-8">
+<!-- ProfileHeader -->
+<div class="flex p-4 @container bg-slate-50 dark:bg-[#183422]/30 rounded-xl mb-6">
+<div class="flex w-full flex-col gap-6 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-6 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 w-24 border-4 border-primary shadow-[0_0_15px_rgba(37,244,106,0.3)]" data-alt="Close up of user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvaB3viwtDyn1i5chT3mujgTmcXWAFk8XVp87-hM5zXLFrzyak4MVwaNkEJ9Ag8f-VxHL6RmEN_BHD3b7NL1_-xmq79b6UhW-mFXC5ax6DwdsBOfPONiaRiA-PEwCfaA4NGJjiXHwqtRfbnFzx3q0Xev_OVNpAJD83DRWVic51VFVRrSqDFquEPDY2fmAmY3UBM7Suclv9d1X3RdEpcfuwS-7SRMtzN5IQE3OeGbwXmAv2rYSBolnLmZkOBVQLsUE3vglb8Z0dc5E");'></div>
+<div class="flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-2xl lg:text-3xl font-bold leading-tight tracking-[-0.015em] font-display">Carlos BioGuardián</p>
+<span class="material-symbols-outlined text-primary fill-1">verified</span>
+</div>
+<p class="text-slate-500 dark:text-[#90cba4] text-base font-normal leading-normal">Miembro desde Enero 2023</p>
+<div class="mt-2 inline-flex items-center px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-wider">
+                                        Nivel: Protector del Bosque
+                                    </div>
+</div>
+</div>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 border border-slate-300 dark:border-[#316843] bg-transparent text-slate-700 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-slate-100 dark:hover:bg-[#22492f] transition-all">
+<span class="material-symbols-outlined mr-2 text-sm">edit</span>
+<span class="truncate">Editar Perfil</span>
+</button>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="flex items-center justify-between px-4 pb-3 pt-5">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] font-display">Mi Suscripción Actual</h2>
+<span class="text-primary text-sm font-medium">Plan Activo</span>
+</div>
+<!-- Active Subscription Card -->
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-xl border border-primary/20 bg-white dark:bg-[#183422] overflow-hidden">
+<div class="w-full @xl:w-1/3 bg-center bg-no-repeat aspect-video @xl:aspect-square bg-cover" data-alt="Lush green rainforest canopy landscape" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCezE0BMVh0acHU_EfutIe1xpWl2mdo2PvRDkm-OsEe6pb3Oqj7vXMC3ejCDqIMq0SNJBNbHSjTB6gYy_R3Bm_3zg6HGr0azx1J8ktg8otbnATMUgGvMnMhJNE41JxJUaV1V6Gi2B0K6PjUqxBRTIKOgbXPDDcHDZuk_4x4OBWEFy7_l8y5NYq_yhzEtzN4ZZhyXKzW_PmKlQAnCACqmwWQ38y4oVdyweH96H57KYTA5jD1rm6td09_PisRkFI_nU723fRGwCVRWqI");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-4 p-6 lg:p-8">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] font-display">Plan Premium Bio-Sustentable</p>
+<p class="text-primary text-base font-medium leading-normal">Activo hasta el 15 de Octubre, 2024</p>
+</div>
+<div class="flex flex-col gap-3 py-2 border-y border-slate-100 dark:border-[#22492f]">
+<p class="text-slate-500 dark:text-[#90cba4] text-sm font-normal">Beneficios incluidos en tu plan:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+<div class="flex items-center gap-2 py-1">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<p class="text-slate-700 dark:text-white text-sm">Especies raras ilimitadas</p>
+</div>
+<div class="flex items-center gap-2 py-1">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<p class="text-slate-700 dark:text-white text-sm">Soporte prioritario 24/7</p>
+</div>
+<div class="flex items-center gap-2 py-1">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<p class="text-slate-700 dark:text-white text-sm">Reportes de impacto mensual</p>
+</div>
+<div class="flex items-center gap-2 py-1">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<p class="text-slate-700 dark:text-white text-sm">Expediciones virtuales VR</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 pt-2">
+<button class="flex-1 min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal transition-transform active:scale-95 shadow-lg shadow-primary/20">
+<span class="truncate">Mejorar Plan</span>
+</button>
+<button class="flex-1 min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-100 dark:bg-[#22492f] text-slate-700 dark:text-white text-sm font-bold leading-normal transition-colors hover:bg-slate-200 dark:hover:bg-[#2d613e]">
+<span class="truncate">Descargar Recibos</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="px-4 pb-3 pt-8">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] font-display">Historial de Membresías</h2>
+</div>
+<!-- Membership History Table -->
+<div class="mx-4 overflow-hidden rounded-xl border border-slate-200 dark:border-[#22492f] bg-white dark:bg-background-dark">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-[#183422] text-slate-500 dark:text-[#90cba4] text-xs font-bold uppercase tracking-wider">
+<th class="px-6 py-4">Fecha</th>
+<th class="px-6 py-4">Plan</th>
+<th class="px-6 py-4">Monto</th>
+<th class="px-6 py-4">Estado</th>
+<th class="px-6 py-4 text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-[#22492f]">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-[#183422]/20 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-700 dark:text-white">15 Sep 2023</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Premium Bio-Sustentable</td>
+<td class="px-6 py-4 text-sm text-slate-700 dark:text-white">$24.99</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-primary/10 text-primary border border-primary/20">Completado</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:underline text-sm font-medium">Ver Factura</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-[#183422]/20 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-700 dark:text-white">15 Ago 2023</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Premium Bio-Sustentable</td>
+<td class="px-6 py-4 text-sm text-slate-700 dark:text-white">$24.99</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-primary/10 text-primary border border-primary/20">Completado</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:underline text-sm font-medium">Ver Factura</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-[#183422]/20 transition-colors">
+<td class="px-6 py-4 text-sm text-slate-700 dark:text-white">15 Jul 2023</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Básico Semilla</td>
+<td class="px-6 py-4 text-sm text-slate-700 dark:text-white">$9.99</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-primary/10 text-primary border border-primary/20">Completado</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary hover:underline text-sm font-medium">Ver Factura</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Action Bar / Footer of section -->
+<div class="mt-12 p-6 rounded-xl bg-gradient-to-r from-background-dark to-[#183422] border border-[#22492f] flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary/10 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-lg font-display">¿Quieres maximizar tu impacto?</h3>
+<p class="text-[#90cba4] text-sm">Pásate al plan Guardián Ancestral y apadrina una hectárea de bosque real.</p>
+</div>
+</div>
+<button class="w-full md:w-auto px-8 h-12 bg-primary text-background-dark font-bold rounded-lg hover:scale-105 transition-transform">
+                            Mejorar a Guardián
+                        </button>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 dark:border-[#22492f] mt-10 py-8 text-center text-slate-500 dark:text-[#90cba4] text-sm font-display">
+<div class="flex justify-center gap-6 mb-4">
+<a class="hover:text-primary transition-colors" href="#">Términos</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Soporte</a>
+</div>
+<p>© 2024 BioDiversity Initiative. Protegiendo el futuro verde.</p>
+</footer>
+</div>
+</div>
+</body></html>
