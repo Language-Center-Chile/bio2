@@ -1,61 +1,174 @@
-<!-- consultores.html -->
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Red de Consultores - Biodiversidad.cl</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biodiversidad.cl - Red de Consultores</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00a859",
+                        "dark-bg": "#0a0a0a",
+                        "card-dark": "#161616",
+                        "card-border": "#262626",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+        function toggleDropdown() {
+            const dropdown = document.getElementById('user-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #00a859;
+        }
+        body {
+            background-color: #0a0a0a;
+            color: white;
+        }
+        .consultant-card {
+            background-color: #161616;
+            border: 1px solid #262626;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .consultant-card:hover {
+            border-color: #333;
+        }
+    </style>
 </head>
-<body>
-  <nav class="navbar">
-    <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="marketplace.html">Marketplace</a></li>
-      <li><a href="consultores.html">Consultores</a></li>
-      <li><a href="educacion.html">Educaci&oacute;n</a></li>
-      <li><a href="campanas.html">Campa&ntilde;as</a></li>
-      <li><a href="informacion.html">Informaci&oacute;n</a></li>
-      <li><a href="membresias.html">Membres&iacute;as</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="login.html" class="btn-login">Ingresar</a></li>
-    </ul>
-  </nav>
+<body class="font-sans antialiased min-h-screen flex flex-col">
+<nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16 gap-4">
+<div class="flex items-center gap-2 shrink-0">
+<span class="text-2xl font-bold tracking-tight text-primary">Biodiversidad.cl</span>
+</div>
+<div class="flex-1 max-w-xl hidden md:block">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">search</span>
+<input class="w-full bg-white/5 border border-white/10 rounded-full py-1.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all placeholder:text-gray-500 text-white" placeholder="Buscar consultores, especialidades..." type="text"/>
+</div>
+</div>
+<div class="hidden lg:flex items-center space-x-8 shrink-0">
+<a class="flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-lg">home</span> Inicio
+                    </a>
+<a class="flex items-center gap-1.5 text-sm font-medium text-primary" href="#">
+<span class="material-symbols-outlined text-lg">groups</span> Consultores
+                    </a>
+<a class="flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-lg">badge</span> Membresías
+                    </a>
+</div>
+<div class="relative shrink-0">
+<button class="flex items-center gap-3 p-1 rounded-full hover:bg-white/10 transition-all" onclick="toggleDropdown()">
+<div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-white text-xs font-bold">FI</div>
+<span class="text-sm font-medium hidden sm:inline-block text-white">Fernando Ibañez</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-64 bg-card-dark rounded-xl shadow-2xl border border-white/10 py-4 z-50" id="user-dropdown">
+<div class="px-4 pb-3 flex items-center gap-3 border-b border-white/10">
+<div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white text-sm font-bold">FI</div>
+<div>
+<p class="text-sm font-bold text-white">Fernando Ibañez</p>
+<p class="text-xs text-slate-400">Colaborador</p>
+</div>
+</div>
+<div class="py-2">
+<a class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5" href="#">Perfil</a>
+<a class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5" href="#">Cambiar foto</a>
+<a class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5" href="#">Mis publicaciones</a>
+<a class="block px-4 py-2 text-sm text-slate-300 hover:bg-white/5" href="#">Mi membresía</a>
+</div>
+<div class="px-4 pt-2 border-t border-white/10">
+<button class="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-sm font-semibold transition-colors text-white">
+                                Cerrar sesión
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow max-w-7xl mx-auto px-4 py-16 w-full">
+<div class="mb-12">
+<h1 class="text-3xl font-bold text-white mb-2">Red de Consultores</h1>
+<p class="text-gray-400">Conoce a nuestros expertos en medio ambiente y biodiversidad.</p>
+</div>
+<section>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="consultant-card rounded-xl overflow-hidden flex flex-col items-center p-5 shadow-lg">
+<div class="w-full mb-6">
+<img alt="María Fernanda Rojas" class="w-full aspect-square object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7j-oQjcUswD7o5SmgdagJ5o8AWhJ39yDIGLyoPhJxVQ2CNRV-WQX_6HmgB_bl_XrssdToZrX-GSOlmlbiv41oN-f8XA6v6OrCcgv5wYqXAKX4dHL1fzkFt_XH9dFjZgqHeqlxgqCGrrapwDSWsWS7XExUKvPAe-OHH9QHDg1oF5e0sOSM-vwsAcruzbflPUoO0hEmdvD9tPJVC9EJF-nqaiHT4U9uJjV0Uzw_MUQUZ_-uqgbf6eVT2asIf4kbPU1U36NVqxlx7BU"/>
+</div>
+<div class="text-center w-full px-2">
+<h3 class="text-xl font-bold text-white mb-1">María Fernanda Rojas</h3>
+<p class="text-sm text-gray-400 mb-8">Especialista en Impacto Ambiental</p>
+<button class="w-full max-w-[160px] bg-primary hover:bg-[#00924d] text-white text-sm font-semibold py-2.5 px-4 rounded transition-colors mb-2">
+                            Ver perfil
+                        </button>
+</div>
+</div>
+<div class="consultant-card rounded-xl overflow-hidden flex flex-col items-center p-5 shadow-lg">
+<div class="w-full mb-6">
+<img alt="Ignacio Pérez" class="w-full aspect-square object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRPmaOjm2giuHm06tu84jlZQbzaXmxOqu3toK1iPS-KaINxxhlbEd7jLHHsAHo0-wM6ZwwOTi-2K--dOZ4njR-b0n52n1AHG8Krz6RcQFPdAVLxTXQ1v33WU_Izb_6PcwZyZ3Q1iqFeXrk-sj9qGuZK8w4BtzBNSCvkCzSrM9WohcVagqN1TUgyB8qsZMM5CDfHIZHyjpjNsjvv6-Tw-CKiKoKVIa8JLfxmjaO4rdRk56X9SOzDHmguOHmNXUg1n9WUjLNFSHqvQU"/>
+</div>
+<div class="text-center w-full px-2">
+<h3 class="text-xl font-bold text-white mb-1">Ignacio Pérez</h3>
+<p class="text-sm text-gray-400 mb-8">Consultor en Legislación Ambiental</p>
+<button class="w-full max-w-[160px] bg-primary hover:bg-[#00924d] text-white text-sm font-semibold py-2.5 px-4 rounded transition-colors mb-2">
+                            Ver perfil
+                        </button>
+</div>
+</div>
+<div class="consultant-card rounded-xl overflow-hidden flex flex-col items-center p-5 shadow-lg">
+<div class="w-full mb-6">
+<img alt="Sofía Navarro" class="w-full aspect-square object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_go21MERjZydWUY-0zYFabB2mbrDAQXBpuRhXJ_rT0e2uik6ibMazmmdCZQtsnG6pDU8IMLPqECqLiN1K_AEdZuWL13oiiD_Ij5nBBFx3TyOQwKIc5DvdBLhGSToulCREyR7We9UaMBHzqoBscYobqNTpaij7cjym7RlJcuEOQPcaEEtmO2dH52oEdTnGR5cKC4iC_-16E-z09v1xh1AsxfzhM4XpNPzzENzrzECQvkM6c_rac3UFp9Hpaj1SNbsHuqtX50fiR2Y"/>
+</div>
+<div class="text-center w-full px-2">
+<h3 class="text-xl font-bold text-white mb-1">Sofía Navarro</h3>
+<p class="text-sm text-gray-400 mb-8">Educadora Ambiental y Biodiversidad</p>
+<button class="w-full max-w-[160px] bg-primary hover:bg-[#00924d] text-white text-sm font-semibold py-2.5 px-4 rounded transition-colors mb-2">
+                            Ver perfil
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black text-slate-400 py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/10 pb-8">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-green-600/10 border border-green-600/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-500 text-xl font-light">eco</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-green-700/10 border border-green-700/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600 text-xl font-light">forest</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-500 text-xl font-light">water_drop</span>
+</div>
+</div>
+<div class="text-center md:text-right">
+<p class="text-sm">© 2025 Biodiversidad.cl. Todos los derechos reservados.</p>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mt-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos de Uso</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+</div>
+</footer>
 
-  <main>
-    <section class="info-section">
-      <i class="fas fa-user-tie icon"></i>
-      <h2>Red de Consultores Ambientales</h2>
-      <p>Conecta con expertos en medio ambiente para tus proyectos, estudios y cumplimiento normativo.</p>
-    </section>
-
-    <section class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1603570419967-6fef8c236e38?auto=format&fit=crop&w=400&q=80" alt="Consultor 1" />
-        <h4>Mar&iacute;a Fernanda Rojas</h4>
-        <p>Especialista en Impacto Ambiental</p>
-        <a href="#" class="btn primary">Ver perfil</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=80" alt="Consultor 2" />
-        <h4>Ignacio P&eacute;rez</h4>
-        <p>Consultor en Legislaci&oacute;n Ambiental</p>
-        <a href="#" class="btn primary">Ver perfil</a>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Consultor 3" />
-        <h4>Sof&iacute;a Navarro</h4>
-        <p>Educadora Ambiental y Biodiversidad</p>
-        <a href="#" class="btn primary">Ver perfil</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 Biodiversidad.cl &ndash; Conectando con especialistas por un futuro sostenible.</p>
-  </footer>
-</body>
-</html>
+</body></html>
